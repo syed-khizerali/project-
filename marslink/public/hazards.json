@@ -1,0 +1,11 @@
+{ "contracts": [
+  { "k": "A", "label": "Shelter in rover until the front passes", "age0": 5,  "limit": 60 },
+  { "k": "B", "label": "Reroute along the crater rim",            "age0": 20, "limit": 45 },
+  { "k": "C", "label": "Abort to habitat",                         "age0": 40, "limit": 90 } ],
+  "hazards": [
+  { "id": "dust",  "name": "Dust front",      "D": 10, "lat": 18.46, "lon": 77.50, "plan": "A" },
+  { "id": "suit",  "name": "Suit fault",      "D": 4,  "lat": 18.38, "lon": 77.62, "plan": null },
+  { "id": "o2",    "name": "Oxygen reserve",  "D": 90, "lat": 18.31, "lon": 77.55, "plan": "C" },
+  { "id": "delta", "name": "Delta slope",     "D": 35, "lat": 18.43, "lon": 77.68, "plan": "B" },
+  { "id": "wheel", "name": "Rover wheel",     "D": 50, "lat": 18.34, "lon": 77.47, "plan": null },
+  { "id": "rock",  "name": "Rim rockfall",    "D": 18, "lat": 18.52, "lon": 77.63, "plan": "B" } ] }

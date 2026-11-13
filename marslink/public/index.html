@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>MARSLINK</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1318">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css"></head><body>
+<section id="picker" hidden>
+  <h1>MARSLINK</h1><p>Who decides on Mars? Choose your phone’s role.</p>
+  <a class="btn" href="?role=mars">I am the Mars crew</a><a class="btn alt" href="?role=earth">I am Earth control</a>
+</section>
+<div id="app" hidden>
+<header><b>MARSLINK</b><span id="roleTag"></span><span id="net" class="pill">connecting</span></header>
+<main>
+  <div id="map"></div>
+  <aside>
+    <div class="panel"><div class="big"><span id="tauV">12</span> min one-way</div>
+      <label>Signal time τ <input id="tau" type="range" min="3" max="22" step="0.5" value="12"></label>
+      <label>Date in 26-month cycle <span id="dateV"></span><input id="day" type="range" min="0" max="779" value="0"></label>
+      <label>Earth decision time T_think: <span id="ttV">10</span> min <input id="tt" type="range" min="0" max="60" value="10"></label>
+      <div id="shares" class="bar"></div><small id="shareT"></small></div>
+    <div class="panel"><h2 id="selName">Tap a hazard</h2><div id="selMsg" class="mute">Each hazard is coloured by its deadline against τ.</div>
+      <div class="cone"><span>Mars</span><div class="track"><i id="dot"></i></div><span>Earth</span></div><small id="coneT"></small>
+      <div id="planBtns" class="row"></div></div>
+    <div class="panel"><h2>Contracts (dust alert)</h2><div id="contracts"></div><small>Delegation coverage: <b id="cov">0%</b> of sovereign and witness hazards have a valid plan</small></div>
+    <div class="panel"><h2>Messages</h2><div id="log"></div></div>
+  </aside>
+</main>
+<div class="panel wide"><h2>Zone shares across the 26-month cycle</h2><canvas id="cyc" width="1000" height="150"></canvas>
+  <small id="tauSrc"></small></div>
+<div id="banner" hidden></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="app.js"></script>
+</body></html>

@@ -1,0 +1,9 @@
+{
+  "name": "marslink",
+  "version": "1.0.0",
+  "description": "MARSLINK: Who decides on Mars? Causal Sovereignty map for Earth-Mars signal delay.",
+  "main": "server/server.js",
+  "scripts": { "start": "node server/server.js", "tau": "python3 data/make_tau.py" },
+  "dependencies": { "ws": "^8.18.0" },
+  "license": "MIT"
+}
